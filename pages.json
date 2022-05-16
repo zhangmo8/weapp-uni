@@ -1,0 +1,68 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationBarTextStyle": "white",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "报修列表",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/change-password/change-password",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		}
+	],
+	"globalStyle": {
+		// 如果后续需要，公众号打包时可开启这个选项
+		// "navigationStyle": "custom",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "上海交大",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"custom": true,
+		"color": "#909399",
+		"selectedColor": "#303133",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/img/flag.png",
+				"selectedIconPath": "static/img/flag_active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/img/mine.png",
+				"selectedIconPath": "/static/img/mine_active.png",
+				"text": "我"
+			}
+		]
+	}
+}
